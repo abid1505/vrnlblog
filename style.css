@@ -2746,3 +2746,9 @@ button.close {
         list-style: disc;
       color: #8d8d8d; 
     }
+    .profile_img{
+    width: 25px;
+    height: 200px;
+    height: 25px;
+    border-radius: 50%;
+    }

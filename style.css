@@ -2727,3 +2727,15 @@ button.close {
 
 /*# sourceMappingURL=bootstrap.min.css.map */
 
+
+  .tab-panes {
+      display: none;
+    }
+
+    .tab-panes.active {
+      display: block;
+    }
+
+    .nav-tabs li{
+      cursor: pointer;
+    }

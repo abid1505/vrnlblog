@@ -22,7 +22,7 @@
                 <div class="col-12">
                     <nav class="navbar navbar-expand-lg">
                         <!-- Logo -->
-                        <a class="navbar-brand" href="index.html"><img style="width: 76px;" src="images/logo_vrnl.png" alt="Logo"></a>
+                        <a class="navbar-brand" href="index.html"><img style="width: 100px;" src="images/logo_vrnl.png" alt="Logo"></a>
                         <!-- Navbar Toggler -->
                         <button onclick="toggle()" class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#worldNav" aria-controls="worldNav" aria-expanded="false" aria-label="Toggle navigation" fdprocessedid="zlfunv"><i class="fa-solid fa-bars"></i></button>
                         <!-- Navbar -->
@@ -69,7 +69,15 @@
             
             <!-- Single Slide -->
             
-        <div class="owl-stage-outer"><div class="owl-stage" ><div class="owl-item cloned" style=" margin-right: 0px;"><div class="single-hero-slide bg-img background-overlay" style="background-image: url(images/bg2.jpg);"></div></div>
+        <div class="owl-stage-outer"><div class="owl-stage" ><div class="owl-item cloned" style=" margin-right: 0px;"><div class="single-hero-slide bg-img background-overlay" style="background-image: url(images/bg2.jpg);">
+<div class="explored"><h1>Explore the latest in <span class="typing-container" id="typing">Bonus deals, Spin features, and Affiliate</span>  in one place. Stay ahead with fresh updates and smart strategies for every bettor.</h1>
+
+
+</div>
+        </div>
+
+    
+    </div>
 
         <!-- Hero Post Slide -->
          <!-- <div class="hero-post-area">
@@ -1574,6 +1582,37 @@ Copyright © 2025 All rights reserved | This template is made with <i class="fa 
       link.classList.add('active');
     }
   }
+</script>
+
+<script>
+  const words = ["Bonus", "Spin", "Affiliate"];
+  let wordIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  const typingEl = document.getElementById("typing");
+
+  function type() {
+    const currentWord = words[wordIndex];
+    const currentText = currentWord.substring(0, charIndex);
+
+    typingEl.textContent = currentText;
+
+    if (!isDeleting && charIndex < currentWord.length) {
+      charIndex++;
+      setTimeout(type, 150);
+    } else if (isDeleting && charIndex > 0) {
+      charIndex--;
+      setTimeout(type, 100);
+    } else {
+      isDeleting = !isDeleting;
+      if (!isDeleting) {
+        wordIndex = (wordIndex + 1) % words.length;
+      }
+      setTimeout(type, 1000);
+    }
+  }
+
+  type();
 </script>
 
 

@@ -363,7 +363,7 @@ img {
     position: relative;
     z-index: 10; }
     .hero-area .hero-slides .single-hero-slide {
-      height: 600px;
+      height: 550px;
       position: relative;
       z-index: 1; }
       @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -2759,4 +2759,52 @@ button.close {
     height: 200px;
     height: 25px;
     border-radius: 50%;
+    }
+    .explored{
+          display: flex;
+    justify-content: start;
+    padding-top: 12%;
+    padding-left: 5%;
+    width: 50%;
+    }
+
+        .explored h1{
+          color: #fff;
+        }
+
+        .span_chk{
+          color: red;
+        }
+
+
+        
+    .typing-container {
+      display: inline-block;
+      border-right: 5px solid #ce2c2c;
+      font-weight: bold;
+      white-space: nowrap;
+      color: #ce2c2c ;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1em;
+      background-color: #000;
+      animation: blink 0.7s steps(1) infinite;
+      vertical-align: middle;
+      margin-left: 2px;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+
+    @media (max-width: 720px) {
+      .explored {
+    padding-top: 24%;
+    width: 90%;
+      }
     }

@@ -40,6 +40,15 @@
         .background-overlay:after {
             background-color: rgb(0 0 0 / 54%);
         }
+        .section-title h5::after {
+  content: '';
+  display: block;
+  margin: 8px auto 0;
+  width: 40px;
+  height: 4px;
+  background-color: #1e4ed8; /* or #007bff or any blue */
+  border-radius: 2px;
+}
     </style>
 
 </head>
@@ -427,15 +436,15 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row justify-content-center">
 
 
                 <div class="col-12 col-lg-8">
-                    <div class="m-tb-20">
-                        <h5>Most asked question</h5>
+                    <div class="m-tb-20 section-title">
+                        <h5 class="text-center">Frequently Asked Questions</h5>
                     </div>
                     <!-- Comment Area Start -->
-                    <div class="comment_area clearfix mt-40">
+                    <div class="comment_area clearfix mt-30">
                         <ol>
                             <!-- Single Comment Area -->
                             <li class="single_comment_area">

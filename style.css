@@ -2761,15 +2761,14 @@ button.close {
     border-radius: 50%;
     }
     .explored{
-          display: flex;
-    justify-content: start;
     padding-top: 12%;
-    padding-left: 5%;
     width: 50%;
+    margin: 0 auto;
     }
 
         .explored h1{
           color: #fff;
+          text-align: center;
         }
 
         .span_chk{
@@ -2806,5 +2805,8 @@ button.close {
       .explored {
     padding-top: 24%;
     width: 90%;
+      }
+      .explored h1 {
+        text-align: start;
       }
     }

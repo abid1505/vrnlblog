@@ -947,8 +947,8 @@ img {
 /* Form Active State */
 input:focus ~ label,
 textarea:focus ~ label,
-input:valid ~ label,
-textarea:valid ~ label {
+input.has-value ~ label,
+textarea.has-value ~ label {
   top: -15px;
   font-size: 12px;
   color: #D96C75; }

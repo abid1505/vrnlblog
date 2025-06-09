@@ -883,8 +883,8 @@ img {
     margin-bottom: 30px; }
   .contact-form button.world-btn,
   .post-a-comment-area button.world-btn {
-    border-color: #0000ff;
-    background-color: #0000ff;
+    border-color: #D96C75;
+    background-color: #D96C75;
     color: #ffffff;
     margin-top: 40px; }
 
@@ -927,7 +927,7 @@ img {
       width: 0;
       bottom: 1px;
       position: absolute;
-      background-color: #0000ff;
+      background-color: #D96C75;
       transition: 0.5s ease all; }
     .group .bar:before {
       left: 50%; }
@@ -947,11 +947,11 @@ img {
 /* Form Active State */
 input:focus ~ label,
 textarea:focus ~ label,
-input:valid ~ label,
-textarea:valid ~ label {
+input.has-value ~ label,
+textarea.has-value ~ label {
   top: -15px;
   font-size: 12px;
-  color: #0000ff; }
+  color: #D96C75; }
 
 input:focus ~ .bar:before,
 textarea:focus ~ .bar:before,
@@ -967,19 +967,19 @@ textarea:focus ~ .highlight {
 /* Animations */
 @-webkit-keyframes inputHighlighter {
   from {
-    background-color: #0000ff; }
+    background-color: #D96C75; }
   to {
     width: 0;
     background-color: transparent; } }
 @-moz-keyframes inputHighlighter {
   from {
-    background-color: #0000ff; }
+    background-color: #D96C75; }
   to {
     width: 0;
     background-color: transparent; } }
 @keyframes inputHighlighter {
   from {
-    background-color: #0000ff; }
+    background-color: #D96C75; }
   to {
     width: 0;
     background-color: transparent; } }

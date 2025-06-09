@@ -13,8 +13,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" />
+
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+
 </head>
 <style>
+    .contact-container {
+        background: #F7F0EA;
+        width: 100%;
+        padding: 30px;
+    }
+
     .contact-container h2 {
         font-size: 28px;
         margin-bottom: 10px;
@@ -26,8 +38,21 @@
         margin-bottom: 25px;
         color: #6c757d;
     }
-    .mt-20{
+
+    .error-msg {
+        color: #D96C75;
+        font-size: 12px;
+        margin-top: 5px;
+        display: block;
+    }
+
+    .mt-20 {
         margin-top: 20px;
+    }
+
+    .iti {
+        position: relative;
+        display: block;
     }
 </style>
 
@@ -42,8 +67,8 @@
                 <div class="col-12">
                     <nav class="navbar navbar-expand-lg">
                         <!-- Logo -->
-                        <a class="navbar-brand" href="/index.html"><img style="width: 100px;" src="images/logo_vrnl.webp"
-                                alt="Logo"></a>
+                        <a class="navbar-brand" href="/index.html"><img style="width: 100px;"
+                                src="images/logo_vrnl.webp" alt="Logo"></a>
                         <!-- Navbar Toggler -->
                         <button onclick="toggle()" class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#worldNav" aria-controls="worldNav" aria-expanded="false"
@@ -95,7 +120,8 @@
         <div class="container">
             <div class="contact-container">
                 <h2 class="text-center">Connect With Us</h2>
-                <p class="text-center">Have questions or need support? We’re here to help. Reach out to us anytime and we’ll get back to you
+                <p class="text-center">Have questions or need support? We’re here to help. Reach out to us anytime and
+                    we’ll get back to you
                     as soon as possible.</p>
             </div>
 
@@ -105,35 +131,76 @@
                     <div class="post-a-comment-area mt-20">
                         <h5>Get in Touch</h5>
                         <!-- Contact Form -->
-                        <form action="#" method="post">
+                        <form id="contactForm" action="#" method="post" novalidate>
                             <div class="row">
                                 <div class="col-12 col-md-6">
                                     <div class="group">
-                                        <input type="text" name="name" id="name" required="" fdprocessedid="ygsjo">
+                                        <input type="text" name="name" id="name" required placeholder=" "
+                                            pattern="^[a-zA-Z\s]{3,}$" oninput="clearError('name','nameError')"
+                                            fdprocessedid="ygsjo">
                                         <span class="highlight"></span>
                                         <span class="bar"></span>
-                                        <label>Enter your name</label>
+                                        <label for="name">Enter your name
+                                            <!-- <span style="color: red;">*</span> -->
+                                        </label>
+                                        <small class="error-msg" id="nameError"></small>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <div class="group">
-                                        <input type="email" name="email" id="email" required="" fdprocessedid="frrdfc">
+                                        <input type="email" name="email" id="email" placeholder=" "
+                                            oninput="clearError('email','emailError')" required fdprocessedid="frrdfc">
                                         <span class="highlight"></span>
                                         <span class="bar"></span>
-                                        <label>Enter your email</label>
+                                        <label for="email">Enter your email
+                                            <!-- <span style="color: red;">*</span> -->
+                                        </label>
+                                        <small class="error-msg" id="emailError"></small>
                                     </div>
+
                                 </div>
-                                <div class="col-12">
+                                <div class="col-12 col-md-6">
                                     <div class="group">
-                                        <textarea name="message" id="message" required=""></textarea>
+                                        <input type="text" name="country" placeholder=" " id="country"
+                                            pattern="^[a-zA-Z\s]{4,}$" oninput="clearError('country','countryError')"
+                                            required fdprocessedid="frrdfc">
+
                                         <span class="highlight"></span>
                                         <span class="bar"></span>
-                                        <label>Enter your comment</label>
+                                        <label for="country">Enter your country
+                                            <!-- <span style="color: red;">*</span> -->
+                                        </label>
+                                        <small class="error-msg" id="countryError"></small>
+                                    </div>
+
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="group">
+                                        <input type="tel" placeholder="Enter your phone number" name="phone" id="phone"
+                                            autocomplete="off" oninput="clearError('phone','phoneError')" required
+                                            fdprocessedid="frrdfc">
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        <label for="phone"></label>
+                                        <small class="error-msg" id="phoneError"></small>
+                                    </div>
+                                </div>
+                                <div class="col-12" style="z-index: 0;">
+                                    <div class="group">
+                                        <textarea name="message" id="message" placeholder=" " required
+                                            oninput="clearError('message','messageError')" minlength="10"></textarea>
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        <label for="message">Enter your comment
+                                            <!-- <span style="color: red;">*</span> -->
+                                        </label>
+                                        <small class="error-msg" id="messageError"></small>
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button type="submit" class="btn world-btn" fdprocessedid="aerchq">Post
-                                        comment</button>
+                                    <button type="submit" class="btn world-btn" id="submitBtn" disabled
+                                        fdprocessedid="aerchq">Post
+                                        comment <i class="fas fa-paper-plane ms-3"></i></button>
                                 </div>
                             </div>
                         </form>
@@ -193,6 +260,78 @@
     function toggle() {
         document.getElementById("worldNav").classList.toggle("show");
     }
+    document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+
+        // Select inputs and textarea
+        const inputs = form.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"], textarea');
+
+        // Intl-tel-input setup for phone
+        const phoneInput = document.getElementById('phone');
+        const iti = window.intlTelInput(phoneInput, {
+            separateDialCode: true,
+            initialCountry: "auto",
+            preferredCountries: ["in", "us", "gb", "ae"],
+            geoIpLookup: callback => {
+                fetch("https://ipinfo.io?token='your_token'")
+                    .then(resp => resp.json())
+                    .then(resp => callback(resp.country))
+                    .catch(() => callback("us"));
+            },
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js",
+        });
+
+        // Helper: Toggle floating label based on value
+        const toggleHasValue = (input) => {
+            if (input.value.trim() !== '') {
+                input.classList.add('has-value');
+            } else {
+                input.classList.remove('has-value');
+            }
+        };
+
+        // Initialize floating label states for all inputs
+        inputs.forEach(input => {
+            toggleHasValue(input);
+
+            input.addEventListener('input', () => {
+                toggleHasValue(input);
+                checkFormValidity();
+            });
+        });
+
+        // Also handle countrychange event for phone (intl-tel-input)
+        phoneInput.addEventListener('countrychange', () => {
+            toggleHasValue(phoneInput);
+            checkFormValidity();
+        });
+
+        // Check if form is valid and enable/disable submit button
+        function checkFormValidity() {
+            // Use native form validity
+            if (form.checkValidity() && iti.isValidNumber()) {
+                submitBtn.disabled = false;
+            } else {
+                submitBtn.disabled = true;
+            }
+        }
+
+        // Initial check
+        checkFormValidity();
+
+        // Optional: prevent submit for demonstration
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Form submitted!');
+            // Reset form or whatever you want here
+            form.reset();
+
+            // Remove all has-value classes after reset
+            inputs.forEach(input => input.classList.remove('has-value'));
+            submitBtn.disabled = true;
+        });
+    });
 </script>
 
 </body>

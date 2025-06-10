@@ -65,25 +65,36 @@
                         <!-- Navbar -->
                         <div class="collapse navbar-collapse" id="worldNav">
                             <ul class="navbar-nav ml-auto">
-                                <li class="nav-item">
+                                <li class="nav-item active">
                                     <a class="nav-link" href="/index.html">Home <span
                                             class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="/bonus.html">Bonus</a>
                                 </li>
-                                <li class="nav-item active">
+                                <li class="nav-item">
                                     <a class="nav-link" href="/Affiliate.html">Affiliate</a>
                                 </li>
-<li class="nav-item">
+                                <li class="nav-item">
                                     <a class="nav-link" href="/referral.html">Referral</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="/spin.html">Spin & Win</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/game.html">Games</a>
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="Cricket blog/Bet on Cricket.html">Cricket</a>
                                 </li>
+                                <li class="nav-item dropdown" onclick="toggleHighlight()">
+                                    <a class="nav-link">Casino <i class="fa-solid fa-caret-down"></i></a>
+
+                                    <div id="navbarDropdown" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a href="/casino.html" class="dropdown-item">Casino </a>
+                                        <a href="/daimond.html" class="dropdown-item">Daimond Casino</a>
+                                        <a href="/aura.html" class="dropdown-item">AMAN/AURA Casino</a>
+                                    </div>
+                                </li>
+
+
                                 <li class="nav-item">
                                     <a class="nav-link" href="/contact-us.html">Contact</a>
                                 </li>
@@ -461,7 +472,7 @@
                             <li><a href="/Affiliate.html">Affiliate</a></li>
                             <li><a href="/referral.html">Referral</a></li>
                             <li><a href="/spin.html">Spin & Win</a></li>
-                             <li><a href="/game.html">Gaming</a></li>
+                             <li><a href="Cricket blog/Bet on Cricket.html">Cricket</a></li>
                             <li><a href="/contact-us.html">Contact</a></li>
                         </ul>
                     </div>
@@ -486,6 +497,12 @@
         document.getElementById("worldNav").classList.toggle("show");
     }
 </script>
+  <script>
+                    function toggleHighlight() {
+                        const box = document.getElementById('navbarDropdown');
+                        box.classList.toggle('show');
+                    }
+                </script>
 
 </body>
 

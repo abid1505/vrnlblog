@@ -2567,6 +2567,12 @@ button.close {
     -ms-flex-pack: justify!important;
     justify-content: space-between!important
 }
+.justify-content-end{
+  justify-content: end!important
+}
+.text-align-left{
+  text-align: left;
+}
 
 .align-items-center {
     -webkit-box-align: center!important;

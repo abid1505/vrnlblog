@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="/vrnlblog">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VRNL | Latest Pakistan News</title>
+    <meta name="description"
+        content="Explore expert tips on betting exchange, parlay strategies, bonus offers, free spins, and affiliate programs. Stay ahead in 2025 with daily updates and smart betting insights." />
+    <meta name="keywords"
+        content="betting exchange, parlay tips, free spins, casino bonus, betting affiliate, sportsbook offers, online betting 2025" />
+
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="/images/logo_vrnl_favicon.ico" type="image/x-icon">
+
+    <style>
+        .mt-15 {
+            margin-top: 15px;
+        }
+
+        .big-title {
+            text-align: left;
+            font-size: 2.1rem !important;
+        }
+
+        .big-p {
+            color: white;
+            font-size: 1.2rem;
+            text-align: left;
+        }
+
+        .h2-title {
+            color: white;
+        }
+
+        .text-align-left {
+            text-align: left !important;
+        }
+
+        @media only screen and (max-width: 700px) {
+            .big-p {
+                display: none;
+            }
+
+            .big-title {
+                font-size: 1.6rem !important;
+            }
+        }
+
+        /* Base Styles */
+        :root {
+            --primary-color: #16a34a;
+            --primary-dark: #15803d;
+            --primary-light: #dcfce7;
+            --secondary-color: #f8fafc;
+            --text-color: #1e293b;
+            --text-light: #64748b;
+            --white: #ffffff;
+            --black: #0f172a;
+            --gray-50: #f8fafc;
+            --gray-100: #f1f5f9;
+            --gray-200: #e2e8f0;
+            --gray-300: #cbd5e1;
+            --gray-400: #94a3b8;
+            --gray-500: #64748b;
+            --gray-600: #475569;
+            --gray-700: #334155;
+            --gray-800: #1e293b;
+            --gray-900: #0f172a;
+            --cricket-color: #16a34a;
+            --hockey-color: #c97f10;
+            --athletics-color: #7a1a74;
+            --football-color: #1a4474;
+            --border-radius: 0.5rem;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Buttons */
+        .primary-button {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .primary-button:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .outline-button {
+            background-color: transparent;
+            color: var(--text-color);
+            border: 1px solid var(--gray-300);
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .outline-button:hover {
+            background-color: var(--gray-100);
+            border-color: var(--gray-400);
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        /* Badge */
+        .badge {
+            display: inline-block;
+            background-color: var(--primary-light);
+            color: var(--primary-dark);
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .badge.cricket {
+            background-color: rgba(22, 163, 74, 0.1);
+            color: var(--cricket-color);
+        }
+
+        .badge.hockey {
+            background-color: rgba(201, 127, 16, 0.1);
+            color: var(--hockey-color);
+        }
+
+        .badge.athletics {
+            background-color: rgba(122, 26, 116, 0.1);
+            color: var(--athletics-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--primary-light);
+            padding: 4rem 0;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .hero-text {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .hero-text h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .hero-text p {
+            font-size: 1.125rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .hero-image {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Latest Articles */
+        .latest-articles {
+            padding: 4rem 0;
+            background-color: var(--white);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .section-header h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .view-all {
+            color: var(--primary-color);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .article-card {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            background-color: var(--white);
+            border: 1px solid var(--gray-100);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .article-image {
+            position: relative;
+            height: 200px;
+        }
+
+        .article-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .article-image .badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+        }
+
+        .article-content {
+            padding: 1.5rem;
+        }
+
+        .article-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.875rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .article-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .article-content p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .read-more {
+            color: var(--primary-color);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        /* Featured Destination */
+        .featured-destination {
+            padding: 4rem 0;
+            background-color: var(--gray-50);
+        }
+
+        .destination-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .destination-image {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .destination-text {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .destination-text h2 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .destination-text p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .location {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        /* Media Queries */
+        @media (min-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+            }
+
+            .hero-text h2 {
+                font-size: 3rem;
+            }
+
+            .articles-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .destination-content {
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .articles-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Preloader Start -->
+
+    <!-- Preloader End -->
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-lg">
+                        <!-- Logo -->
+                        <a class="navbar-brand" href="/index.html"><img style="width: 100px;"
+                                src="images/logo_vrnl.webp" alt="Logo"></a>
+                        <!-- Navbar Toggler -->
+                        <button onclick="toggle()" class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                            data-target="#worldNav" aria-controls="worldNav" aria-expanded="false"
+                            aria-label="Toggle navigation" fdprocessedid="zlfunv"><i
+                                class="fa-solid fa-bars"></i></button>
+                        <!-- Navbar -->
+                        <div class="navbar-collapse collapse" id="worldNav" style="">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="/index.html">Home <span
+                                            class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/bonus.html">Bonus</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/Affiliate.html">Affiliate</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/referral.html">Referral</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/spin.html">Spin & Win</a>
+                                </li>
+
+                                <li class="nav-item dropdown active" onclick="toggleHighlights()">
+                                    <a class="nav-link">Latest News <i class="fa-solid fa-caret-down"></i></a>
+
+                                    <div id="navbarDropdowns" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a href="/Latestnews/india.html" class="dropdown-item"> India </a>
+                                        <a href="/Latestnews/Pakistan.html" class="dropdown-item">Pakistan</a>
+                                        <a href="/Latestnews/bangladesh.html" class="dropdown-item">Bangladesh</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/Cricket blog/Bet on Cricket.html">Cricket Guide</a>
+                                </li>
+                                <li class="nav-item dropdown" onclick="toggleHighlight()">
+                                    <a class="nav-link">Casino <i class="fa-solid fa-caret-down"></i></a>
+
+                                    <div id="navbarDropdown" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a href="/casino.html" class="dropdown-item">Casino </a>
+                                        <a href="/daimond.html" class="dropdown-item">Diamond Casino</a>
+                                        <a href="/aura.html" class="dropdown-item">AMAN/AURA Casino</a>
+                                    </div>
+                                </li>
+
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/contact-us.html">Contact Us</a>
+                                </li>
+                            </ul>
+                            <!-- Search Form  -->
+
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ********** Hero Area Start ********** -->
+    <div class="hero-area">
+
+        <!-- Hero Slides Area -->
+        <div class="hero-slides owl-carousel owl-theme owl-loaded">
+            <div class="owl-stage-outer">
+                <section class="hero">
+                    <div class="container">
+                        <div class="hero-content">
+                            <div class="hero-text">
+                                <span class="badge">Featured</span>
+                                <h2>Celebrating Pakistan's Sporting Heroes</h2>
+                                <p>Explore the achievements, stories, and legacy of Pakistan's greatest athletes
+                                    across cricket, hockey,
+                                    squash, and more.</p>
+                                <div class="button-group">
+                                    <button class="primary-button">
+                                        Start Reading
+                                        <i class="fas fa-chevron-right"></i>
+                                    </button>
+                                    <button class="outline-button">Learn More</button>
+                                </div>
+                            </div>
+                            <div class="hero-image">
+                                <img src="/images/PK.webp"
+                                    alt="Pakistan Cricket Team celebrating">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Latest Articles -->
+                <section class="latest-articles">
+                    <div class="container">
+                        <div class="section-header">
+                            <h2>Latest Articles</h2>
+                            <a href="#" class="view-all">
+                                View All
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="articles-grid">
+                            <!-- Article 1 -->
+                            <article class="article-card">
+                                <div class="article-image">
+                                    <img src="/images/PK_cricket.webp"
+                                        alt="Pakistan Cricket Team">
+                                    <span class="badge cricket">Cricket</span>
+                                </div>
+                                <div class="article-content">
+                                    <h3>Pakistan's Journey to the T20 World Cup Semi-Finals</h3>
+                                    <div class="article-meta">
+                                        <span><i class="far fa-calendar"></i> June 10, 2025</span>
+                                        <span><i class="far fa-user"></i> By Ahmed Khan</span>
+                                    </div>
+                                    <p>From a rocky start to an incredible comeback, follow the Pakistan cricket
+                                        team's remarkable journey
+                                        through the T20 World Cup, featuring standout performances and memorable
+                                        moments.</p>
+                                </div>
+                            </article>
+
+                            <!-- Article 2 -->
+                            <article class="article-card">
+                                <div class="article-image">
+                                    <img src="/images/PK_hockey.webp"
+                                        alt="Pakistan Hockey Team">
+                                    <span class="badge hockey">Hockey</span>
+                                </div>
+                                <div class="article-content">
+                                    <h3>Reviving Pakistan's Hockey Legacy</h3>
+                                    <div class="article-meta">
+                                        <span><i class="far fa-calendar"></i> June 5, 2025</span>
+                                        <span><i class="far fa-user"></i> By Fatima Ali</span>
+                                    </div>
+                                    <p>Once a dominant force in world hockey with multiple Olympic gold medals,
+                                        Pakistan is working to
+                                        reclaim its former glory through grassroots development and new talent.</p>
+                                </div>
+                            </article>
+
+                            <!-- Article 3 -->
+                            <article class="article-card">
+                                <div class="article-image">
+                                    <img src="/images/PK_Athletics.webp"
+                                        alt="Arshad Nadeem">
+                                    <span class="badge athletics">Athletics</span>
+                                </div>
+                                <div class="article-content">
+                                    <h3>Arshad Nadeem: Pakistan's Olympic Gold Medalist</h3>
+                                    <div class="article-meta">
+                                        <span><i class="far fa-calendar"></i> May 28, 2025</span>
+                                        <span><i class="far fa-user"></i> By Zainab Malik</span>
+                                    </div>
+                                    <p>The inspiring story of Arshad Nadeem, who made history by winning Pakistan's
+                                        first individual Olympic
+                                        gold medal in the javelin throw, overcoming numerous challenges along the
+                                        way.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Featured Destination -->
+                <section class="featured-destination">
+                    <div class="container">
+                        <div class="destination-content">
+                            <div class="destination-image">
+                                <img src="/images/Gaddafi_Stadium.webp"
+                                    alt="Gaddafi Stadium, Lahore">
+                            </div>
+                            <div class="destination-text">
+                                <span class="badge">Featured Venue</span>
+                                <h2>Gaddafi Stadium: Pakistan's Cricket Fortress</h2>
+                                <p>One of the most iconic cricket stadiums in Asia, Gaddafi Stadium in Lahore has
+                                    witnessed countless
+                                    historic moments in Pakistan cricket. From World Cup matches to memorable Test
+                                    victories, this venue
+                                    holds a special place in the hearts of Pakistani sports fans.</p>
+                                <div class="location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Lahore, Pakistan</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ***** Footer Area Start ***** -->
+                <footer class="footer-area">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <div class="footer-single-widget">
+                                    <a href="#"><img width="68px" src="/images/logo_vrnl.webp" alt=""></a>
+                                    <div class="copywrite-text mt-30">
+                                        <p>
+                                            Copyright © 2025 All rights reserved
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="footer-single-widget">
+                                    <ul class="footer-menu d-flex justify-content-between">
+                                        <li><a href="/index.html">Home</a></li>
+                                        <li><a href="/bonus.html">Bonus</a></li>
+                                        <li><a href="/Affiliate.html">Affiliate</a></li>
+                                        <li><a href="/referral.html">Referral</a></li>
+                                        <li><a href="/spin.html">Spin</a></li>
+                                        <li><a href="/Cricket blog/Bet on Cricket.html">Cricket Guide</a></li>
+                                        <li><a href="/contact-us.html">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="footer-single-widget">
+                                    <h5>Subscribe</h5>
+                                    <form action="#" method="post">
+                                        <input type="email" name="email" id="email" placeholder="Enter your mail"
+                                            fdprocessedid="97dkgg">
+                                        <button type="button" fdprocessedid="sgh1bk"><i
+                                                class="fa fa-arrow-right"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+
+
+
+
+
+                <span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span>
+                <script>
+                    function toggle() {
+                        document.getElementById("worldNav").classList.toggle("show");
+                    }
+                </script>
+
+                <script>
+                    function showTab(tabId) {
+                        const tabs = document.querySelectorAll('.tab-panes');
+                        tabs.forEach(tab => {
+                            tab.classList.remove('active');
+                        });
+                        const links = document.querySelectorAll('.nav-link');
+                        links.forEach(link => {
+                            link.classList.remove('active');
+                        });
+                        const selectedTab = document.getElementById(tabId);
+                        if (selectedTab) {
+                            selectedTab.classList.add('active');
+                        }
+                        const navItem = event.currentTarget;
+                        const link = navItem.querySelector('.nav-link');
+                        if (link) {
+                            link.classList.add('active');
+                        }
+                    }
+                </script>
+
+
+                <script>
+                    function showTabs(tabId) {
+                        const tabs = document.querySelectorAll('.tab-paness');
+                        tabs.forEach(tab => {
+                            tab.classList.remove('active');
+                        });
+                        const links = document.querySelectorAll('.nav-target');
+                        links.forEach(link => {
+                            link.classList.remove('active');
+                        });
+                        const selectedTab = document.getElementById(tabId);
+                        if (selectedTab) {
+                            selectedTab.classList.add('active');
+                        }
+                        const navItem = event.currentTarget;
+                        const link = navItem.querySelector('.nav-target');
+                        if (link) {
+                            link.classList.add('active');
+                        }
+                    }
+                </script>
+
+                <script>
+                    const words = ["Bonus", "Spin", "Affiliate"];
+                    let wordIndex = 0;
+                    let charIndex = 0;
+                    let isDeleting = false;
+                    const typingEl = document.getElementById("typing");
+
+                    function type() {
+                        const currentWord = words[wordIndex];
+                        const currentText = currentWord.substring(0, charIndex);
+
+                        typingEl.textContent = currentText;
+
+                        if (!isDeleting && charIndex < currentWord.length) {
+                            charIndex++;
+                            setTimeout(type, 150);
+                        } else if (isDeleting && charIndex > 0) {
+                            charIndex--;
+                            setTimeout(type, 100);
+                        } else {
+                            isDeleting = !isDeleting;
+                            if (!isDeleting) {
+                                wordIndex = (wordIndex + 1) % words.length;
+                            }
+                            setTimeout(type, 1000);
+                        }
+                    }
+
+                    type();
+                </script>
+
+                <script>
+                    function toggleHighlight() {
+                        const box = document.getElementById('navbarDropdown');
+                        box.classList.toggle('show');
+                    }
+                </script>
+                <script>
+                    function toggleHighlights() {
+                        const box = document.getElementById('navbarDropdowns');
+                        box.classList.toggle('show');
+                    }
+                </script>
+
+</body>
+
+</html>

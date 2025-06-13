@@ -19,15 +19,17 @@
         .height-600 {
             height: 449px !important;
         }
-                 @media (max-width: 720px) {
 
-.height-600 {
-    height: 168px !important;
-}
-    .single-blog-title h3 {
-        font-size: 17px;
-    }
-    }
+        @media (max-width: 720px) {
+
+            .height-600 {
+                height: 168px !important;
+            }
+
+            .single-blog-title h3 {
+                font-size: 17px;
+            }
+        }
     </style>
 
 </head>
@@ -51,12 +53,12 @@
                             aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
                         <!-- Navbar -->
                         <div class="collapse navbar-collapse" id="worldNav">
-                            <ul class="navbar-nav ml-auto">
-                                <li class="nav-item ">
+                           <ul class="navbar-nav ml-auto">
+                                <li class="nav-item active">
                                     <a class="nav-link" href="/index.html">Home <span
                                             class="sr-only">(current)</span></a>
                                 </li>
-                                <li class="nav-item active">
+                                <li class="nav-item">
                                     <a class="nav-link" href="/bonus.html">Bonus</a>
                                 </li>
                                 <li class="nav-item">
@@ -67,6 +69,16 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="/spin.html">Spin & Win</a>
+                                </li>
+
+                                      <li class="nav-item dropdown" onclick="toggleHighlights()">
+                                    <a class="nav-link">Latest News <i class="fa-solid fa-caret-down"></i></a>
+
+                                    <div id="navbarDropdowns" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a href="/Latestnews/india.html" class="dropdown-item"> India </a>
+                                        <a href="/" class="dropdown-item">Pakistan</a>
+                                        <a href="/Latestnews/bangladesh.html" class="dropdown-item">Bangladesh</a>
+                                    </div>
                                 </li>
                                  <li class="nav-item">
                                     <a class="nav-link" href="/Cricket blog/Bet on Cricket.html">Cricket Guide</a>
@@ -87,7 +99,7 @@
                                 </li>
                             </ul>
                             <!-- Search Form  -->
-                            
+
                         </div>
                     </nav>
                 </div>
@@ -276,8 +288,8 @@
                         <a href="#"><img width="68px" src="/images/logo_vrnl.webp" alt=""></a>
                         <div class="copywrite-text mt-30">
                             <p>
-                               Copyright © 2025 All rights reserved
-                                
+                                Copyright © 2025 All rights reserved
+
                             </p>
                         </div>
                     </div>
@@ -316,11 +328,17 @@
     }
 </script>
 <script>
-     function toggleHighlight() {
-    const box = document.getElementById('navbarDropdown');
-    box.classList.toggle('show');
-  }
+    function toggleHighlight() {
+        const box = document.getElementById('navbarDropdown');
+        box.classList.toggle('show');
+    }
 </script>
+ <script>
+                    function toggleHighlights() {
+                        const box = document.getElementById('navbarDropdowns');
+                        box.classList.toggle('show');
+                    }
+                </script>
 </body>
 
 </html>

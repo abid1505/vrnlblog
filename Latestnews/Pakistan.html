@@ -51,344 +51,6 @@
                 font-size: 1.6rem !important;
             }
         }
-
-        /* Base Styles */
-        :root {
-            --primary-color: #16a34a;
-            --primary-dark: #15803d;
-            --primary-light: #dcfce7;
-            --secondary-color: #f8fafc;
-            --text-color: #1e293b;
-            --text-light: #64748b;
-            --white: #ffffff;
-            --black: #0f172a;
-            --gray-50: #f8fafc;
-            --gray-100: #f1f5f9;
-            --gray-200: #e2e8f0;
-            --gray-300: #cbd5e1;
-            --gray-400: #94a3b8;
-            --gray-500: #64748b;
-            --gray-600: #475569;
-            --gray-700: #334155;
-            --gray-800: #1e293b;
-            --gray-900: #0f172a;
-            --cricket-color: #16a34a;
-            --hockey-color: #c97f10;
-            --athletics-color: #7a1a74;
-            --football-color: #1a4474;
-            --border-radius: 0.5rem;
-            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-            --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            color: var(--text-color);
-            line-height: 1.6;
-            background-color: var(--white);
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-
-        /* Buttons */
-        .primary-button {
-            background-color: var(--primary-color);
-            color: var(--white);
-            border: none;
-            padding: 0.75rem 1.5rem;
-            border-radius: var(--border-radius);
-            font-weight: 600;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: background-color 0.3s ease;
-        }
-
-        .primary-button:hover {
-            background-color: var(--primary-dark);
-        }
-
-        .outline-button {
-            background-color: transparent;
-            color: var(--text-color);
-            border: 1px solid var(--gray-300);
-            padding: 0.75rem 1.5rem;
-            border-radius: var(--border-radius);
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .outline-button:hover {
-            background-color: var(--gray-100);
-            border-color: var(--gray-400);
-        }
-
-        .button-group {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-
-        /* Badge */
-        .badge {
-            display: inline-block;
-            background-color: var(--primary-light);
-            color: var(--primary-dark);
-            padding: 0.25rem 0.75rem;
-            border-radius: 1rem;
-            font-size: 0.875rem;
-            font-weight: 600;
-        }
-
-        .badge.cricket {
-            background-color: rgba(22, 163, 74, 0.1);
-            color: var(--cricket-color);
-        }
-
-        .badge.hockey {
-            background-color: rgba(201, 127, 16, 0.1);
-            color: var(--hockey-color);
-        }
-
-        .badge.athletics {
-            background-color: rgba(122, 26, 116, 0.1);
-            color: var(--athletics-color);
-        }
-
-        /* Hero Section */
-        .hero {
-            background-color: var(--primary-light);
-            padding: 4rem 0;
-        }
-
-        .hero-content {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-        }
-
-        .hero-text {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .hero-text h2 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            line-height: 1.2;
-        }
-
-        .hero-text p {
-            font-size: 1.125rem;
-            color: var(--text-light);
-            margin-bottom: 1rem;
-        }
-
-        .hero-image {
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
-        }
-
-        /* Latest Articles */
-        .latest-articles {
-            padding: 4rem 0;
-            background-color: var(--white);
-        }
-
-        .section-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 2rem;
-        }
-
-        .section-header h2 {
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-
-        .view-all {
-            color: var(--primary-color);
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .articles-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-        }
-
-        .article-card {
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            background-color: var(--white);
-            border: 1px solid var(--gray-100);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .article-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .article-image {
-            position: relative;
-            height: 200px;
-        }
-
-        .article-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .article-image .badge {
-            position: absolute;
-            top: 1rem;
-            left: 1rem;
-        }
-
-        .article-content {
-            padding: 1.5rem;
-        }
-
-        .article-content h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-        }
-
-        .article-meta {
-            display: flex;
-            gap: 1rem;
-            font-size: 0.875rem;
-            color: var(--text-light);
-            margin-bottom: 1rem;
-        }
-
-        .article-meta span {
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
-        }
-
-        .article-content p {
-            color: var(--text-light);
-            margin-bottom: 1rem;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        .read-more {
-            color: var(--primary-color);
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
-        }
-
-        /* Featured Destination */
-        .featured-destination {
-            padding: 4rem 0;
-            background-color: var(--gray-50);
-        }
-
-        .destination-content {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-        }
-
-        .destination-image {
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
-        }
-
-        .destination-text {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .destination-text h2 {
-            font-size: 2rem;
-            font-weight: 700;
-        }
-
-        .destination-text p {
-            color: var(--text-light);
-            margin-bottom: 1rem;
-        }
-
-        .location {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--text-light);
-            margin-bottom: 1rem;
-        }
-
-        /* Media Queries */
-        @media (min-width: 768px) {
-            .hero-content {
-                grid-template-columns: 1fr 1fr;
-                align-items: center;
-            }
-
-            .hero-text h2 {
-                font-size: 3rem;
-            }
-
-            .articles-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .destination-content {
-                grid-template-columns: 1fr 1fr;
-                align-items: center;
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .articles-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
     </style>
 
 </head>
@@ -474,130 +136,285 @@
 
         <!-- Hero Slides Area -->
         <div class="hero-slides owl-carousel owl-theme owl-loaded">
+            <!-- Single Slide -->
+
+            <!-- Single Slide -->
+
             <div class="owl-stage-outer">
-                <section class="hero">
+
+                <!-- ********** Hero Area End ********** -->
+
+                <div class="main-content-wrapper section-padding-100">
                     <div class="container">
-                        <div class="hero-content">
-                            <div class="hero-text">
-                                <span class="badge">Featured</span>
-                                <h2>Celebrating Pakistan's Sporting Heroes</h2>
-                                <p>Explore the achievements, stories, and legacy of Pakistan's greatest athletes
-                                    across cricket, hockey,
-                                    squash, and more.</p>
-                                <div class="button-group">
-                                    <button class="primary-button">
-                                        Start Reading
-                                        <i class="fas fa-chevron-right"></i>
-                                    </button>
-                                    <button class="outline-button">Learn More</button>
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-6 col-lg-8">
+                                <div class="single-blog-post post-style-3 mt-50 wow fadeInUpBig" data-wow-delay="0.2s"
+                                    style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUpBig;">
+                                    <!-- Post Thumbnail -->
+                                    <div class="post-thumbnail">
+                                        <img src="images/pakistan-t20-squad.webp" alt="Pakistan T20 Squad">
+                                        <!-- Post Content -->
+                                        <div class="post-content d-flex align-items-center justify-content-end">
+                                            <!-- Catagory -->
+                                            <div><a href="#"></a></div>
+                                            <!-- Headline -->
+                                            <a href="game.html" class="headline">
+                                                <h5 class="big-title">Pakistan Announces T20 Squad for England Series</h5>
+                                                <p class="big-p">Pakistan Cricket Board has announced a 16-member squad for the upcoming T20I series against England, starting June 15. The squad features a mix of experienced players and promising newcomers.</p>
+                                            </a>
+
+                                            <!-- Post Meta -->
+                                            <div class="post-meta">
+                                                <p><a href="#" class="post-author">June 12, 2025</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="hero-image">
-                                <img src="/images/PK.webp"
-                                    alt="Pakistan Cricket Team celebrating">
+                            <div class="col-12 col-md-4 col-lg-4">
+                                <div class="single-blog-post post-style-3 mt-50 wow fadeInUpBig" data-wow-delay="0.2s"
+                                    style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUpBig;">
+                                    <!-- Post Thumbnail -->
+                                    <div class="post-thumbnail">
+                                        <img src="/images/haris-rauf.webp" alt="Haris Rauf">
+                                        <!-- Post Content -->
+                                        <div
+                                            class="post-content d-flex text-align-left align-items-center justify-content-end">
+                                            <!-- Catagory -->
+                                            <div><a href="#"></a></div>
+                                            <!-- Headline -->
+                                            <a href="game.html" class="headline">
+                                                <h2 class="h2-title">Haris Rauf Signs with Melbourne Stars for BBL</h2>
+                                                <!-- <p>Pakistan will host Bangladesh for a three-match T20I series in
+                                                    Lahore. The series is part of preparation for the upcoming T20 World Cup.</p> -->
+                                            </a>
+
+                                            <!-- Post Meta -->
+                                            <div class="post-meta">
+                                                <p><a href="#" class="post-author">June 11, 2025</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-blog-post post-style-3 mt-15 wow fadeInUpBig" data-wow-delay="0.2s"
+                                    style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUpBig;">
+                                    <!-- Post Thumbnail -->
+                                    <div class="post-thumbnail">
+                                        <img src="/images/pakistan-women.webp" alt="Pakistan Women's Team">
+                                        <!-- Post Content -->
+                                        <div
+                                            class="post-content d-flex text-align-left align-items-center justify-content-end">
+                                            <!-- Catagory -->
+                                            <div><a href="#"></a></div>
+                                            <!-- Headline -->
+                                            <a href="game.html" class="headline">
+                                                <h2 class="h2-title">Pakistan Women's Team Prepares for Asia Cup</h2>
+                                                <!-- <p>Pakistan's national team has announced its squad for the England tour
+                                                    consisting of 3 ODIs and 3 T20Is—part of preparation for the 2025 Champions Trophy.</p> -->
+                                            </a>
+
+                                            <!-- Post Meta -->
+                                            <div class="post-meta">
+                                                <p><a href="#" class="post-author">June 13, 2025</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="world-latest-articles">
+                            <div class="row">
+
+                                <div class="col-12 col-lg-8">
+                                    <div class="title">
+                                        <h5>Category: Pakistan Sports News</h5>
+                                    </div>
+
+                                    <!-- Single Blog Post -->
+                                    <div class="single-blog-post post-style-4 d-flex align-items-center wow fadeInUpBig"
+                                        data-wow-delay="0.2s"
+                                        style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUpBig;">
+                                        <!-- Post Thumbnail -->
+                                        <div class="post-thumbnail">
+                                            <img src="/images/pcb-contracts.webp" alt="PCB Contracts">
+                                        </div>
+                                        <!-- Post Content -->
+                                        <div class="post-content">
+                                            <a href="/spincomp/topspin.html" class="headline">
+                                                <h5>PCB Announces New Central Contracts with Increased Pay</h5>
+                                            </a>
+                                            <p>The Pakistan Cricket Board has announced new central contracts for 2025-26 with a significant increase in player salaries and performance-based incentives
+                                            </p>
+                                            <!-- Post Meta -->
+                                            <div class="post-meta">
+                                                <p><a href="#" class="post-author">cricbuzz</a> on <a href="#"
+                                                        class="post-date">June 13, 2025 at 2:30 pm</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Single Blog Post -->
+                                    <div class="single-blog-post post-style-4 d-flex align-items-center wow fadeInUpBig"
+                                        data-wow-delay="0.3s"
+                                        style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUpBig;">
+                                        <!-- Post Thumbnail -->
+                                        <div class="post-thumbnail">
+                                            <img src="/images/shadab-khan.webp" alt="Shadab Khan">
+                                        </div>
+                                        <!-- Post Content -->
+                                        <div class="post-content">
+                                            <a href="/bonuscomp/bettingbonus.html" class="headline">
+                                                <h5>Shadab Khan Named T20I Vice-Captain</h5>
+                                            </a>
+                                            <p>All-rounder Shadab Khan has been appointed as the vice-captain of Pakistan's T20I team, supporting captain Babar Azam for the upcoming series against England
+                                            </p>
+                                            <!-- Post Meta -->
+                                            <div class="post-meta">
+                                                <p><a href="#" class="post-author">espncricinfo</a> on <a href="#"
+                                                        class="post-date">June 12, 2025 at 11:15 am</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Single Blog Post -->
+                                    <div class="single-blog-post post-style-4 d-flex align-items-center wow fadeInUpBig"
+                                        data-wow-delay="0.4s"
+                                        style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUpBig;">
+                                        <!-- Post Thumbnail -->
+                                        <div class="post-thumbnail">
+                                            <img src="/images/champions-trophy.webp" alt="Champions Trophy">
+                                        </div>
+                                        <!-- Post Content -->
+                                        <div class="post-content">
+                                            <a href="affiliate comp/zero-to-hero.html" class="headline">
+                                                <h5>Pakistan to Host Champions Trophy 2025: ICC Confirms</h5>
+                                            </a>
+                                            <p>The International Cricket Council has confirmed that Pakistan will host the Champions Trophy 2025, marking the return of a major ICC tournament to the country after decades
+                                            </p>
+                                            <!-- Post Meta -->
+                                            <div class="post-meta">
+                                                <p><a href="#" class="post-author">icc-cricket</a> on <a href="#"
+                                                        class="post-date">June 11, 2025 at 4:45 pm</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Single Blog Post -->
+                                    <div class="single-blog-post post-style-4 d-flex align-items-center wow fadeInUpBig"
+                                        data-wow-delay="0.5s"
+                                        style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUpBig;">
+                                        <!-- Post Thumbnail -->
+                                        <div class="post-thumbnail">
+                                            <img src="/images/mohammad-amir.webp" alt="Mohammad Amir">
+                                        </div>
+                                        <!-- Post Content -->
+                                        <div class="post-content">
+                                            <a href="#" class="headline">
+                                                <h5>Mohammad Amir Returns to Test Cricket</h5>
+                                            </a>
+                                            <p>Fast bowler Mohammad Amir has announced his return to Test cricket after previously retiring from the format, making himself available for Pakistan's upcoming Test series
+                                            </p>
+                                            <!-- Post Meta -->
+                                            <div class="post-meta">
+                                                <p><a href="#" class="post-author">skysports</a> on <a href="#"
+                                                        class="post-date">June 13, 2025 at 9:20 am</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="single-blog-post post-style-4 d-flex align-items-center wow fadeInUpBig"
+                                        data-wow-delay="0.5s"
+                                        style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUpBig;">
+                                        <!-- Post Thumbnail -->
+                                        <div class="post-thumbnail">
+                                            <img src="/images/psl-draft.webp" alt="PSL Draft">
+                                        </div>
+                                        <!-- Post Content -->
+                                        <div class="post-content">
+                                            <a href="#" class="headline">
+                                                <h5>Pakistan Super League 2026 Draft Dates Announced</h5>
+                                            </a>
+                                            <p>The Pakistan Cricket Board has announced the dates for the Pakistan Super League 2026 player draft, scheduled to take place in Lahore on August 15-16, 2025
+                                            </p>
+                                            <!-- Post Meta -->
+                                            <div class="post-meta">
+                                                <p><a href="#" class="post-author">geosuper</a> on <a href="#"
+                                                        class="post-date">June 12, 2025 at 3:40 pm</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-lg-4">
+                                    <div class="title">
+                                        <h5>Most Popular Articles</h5>
+                                    </div>
+
+                                    <!-- Single Blog Post -->
+                                    <div class="single-blog-post wow fadeInUpBig" data-wow-delay="0.2s"
+                                        style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUpBig;">
+                                        <!-- Post Thumbnail -->
+                                        <div class="post-thumbnail">
+                                            <img src="/images/pak-eng-t20.webp" alt="Pakistan vs England T20">
+                                            <!-- Catagory -->
+
+                                            <!-- Video Button -->
+                                            <!-- <a href="" class="video-btn"><i class="fa fa-play"></i></a> -->
+                                        </div>
+                                        <!-- Post Content -->
+                                        <div class="post-content">
+                                            <a href="#" class="headline">
+                                                <h5>Pakistan-England T20I Series: Complete Schedule</h5>
+                                            </a>
+                                            <p>The complete schedule for the Pakistan vs England T20I series has been released, with matches to be played in Karachi, Lahore, and Rawalpindi from June 15-23, 2025</p>
+                                            <!-- Post Meta -->
+                                            <div class="post-meta">
+                                                <p><a href="#" class="post-author">cricketpakistan</a> on <a href="#"
+                                                        class="post-date">June 11, 2025 at 10:30 am</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Single Blog Post -->
+                                    <div class="single-blog-post wow fadeInUpBig" data-wow-delay="0.4s"
+                                        style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUpBig;">
+                                        <!-- Post Thumbnail -->
+                                        <div class="post-thumbnail">
+                                            <img src="/images/fakhar-zaman.webp" alt="Fakhar Zaman">
+                                            <!-- Catagory -->
+
+                                            <!-- Video Button -->
+                                            <!-- <a href="" class="video-btn"><i class="fa fa-play"></i></a> -->
+                                        </div>
+                                        <!-- Post Content -->
+                                        <div class="post-content">
+                                            <a href="#" class="headline">
+                                                <h5>Fakhar Zaman's Record-Breaking Century Against Zimbabwe</h5>
+                                            </a>
+                                            <p>Fakhar Zaman scored the fastest T20I century for Pakistan, reaching the milestone in just 42 balls during the recent series against Zimbabwe</p>
+                                            <!-- Post Meta -->
+                                            <div class="post-meta">
+                                                <p><a href="#" class="post-author">dawn</a> on <a href="#"
+                                                        class="post-date">June 12, 2025 at 1:15 pm</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Load More btn -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="load-more-btn mt-50 text-center">
+                                </div>
                             </div>
                         </div>
                     </div>
-                </section>
-
-                <!-- Latest Articles -->
-                <section class="latest-articles">
-                    <div class="container">
-                        <div class="section-header">
-                            <h2>Latest Articles</h2>
-                            <a href="#" class="view-all">
-                                View All
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-
-                        <div class="articles-grid">
-                            <!-- Article 1 -->
-                            <article class="article-card">
-                                <div class="article-image">
-                                    <img src="/images/PK_cricket.webp"
-                                        alt="Pakistan Cricket Team">
-                                    <span class="badge cricket">Cricket</span>
-                                </div>
-                                <div class="article-content">
-                                    <h3>Pakistan's Journey to the T20 World Cup Semi-Finals</h3>
-                                    <div class="article-meta">
-                                        <span><i class="far fa-calendar"></i> June 10, 2025</span>
-                                        <span><i class="far fa-user"></i> By Ahmed Khan</span>
-                                    </div>
-                                    <p>From a rocky start to an incredible comeback, follow the Pakistan cricket
-                                        team's remarkable journey
-                                        through the T20 World Cup, featuring standout performances and memorable
-                                        moments.</p>
-                                </div>
-                            </article>
-
-                            <!-- Article 2 -->
-                            <article class="article-card">
-                                <div class="article-image">
-                                    <img src="/images/PK_hockey.webp"
-                                        alt="Pakistan Hockey Team">
-                                    <span class="badge hockey">Hockey</span>
-                                </div>
-                                <div class="article-content">
-                                    <h3>Reviving Pakistan's Hockey Legacy</h3>
-                                    <div class="article-meta">
-                                        <span><i class="far fa-calendar"></i> June 5, 2025</span>
-                                        <span><i class="far fa-user"></i> By Fatima Ali</span>
-                                    </div>
-                                    <p>Once a dominant force in world hockey with multiple Olympic gold medals,
-                                        Pakistan is working to
-                                        reclaim its former glory through grassroots development and new talent.</p>
-                                </div>
-                            </article>
-
-                            <!-- Article 3 -->
-                            <article class="article-card">
-                                <div class="article-image">
-                                    <img src="/images/PK_Athletics.webp"
-                                        alt="Arshad Nadeem">
-                                    <span class="badge athletics">Athletics</span>
-                                </div>
-                                <div class="article-content">
-                                    <h3>Arshad Nadeem: Pakistan's Olympic Gold Medalist</h3>
-                                    <div class="article-meta">
-                                        <span><i class="far fa-calendar"></i> May 28, 2025</span>
-                                        <span><i class="far fa-user"></i> By Zainab Malik</span>
-                                    </div>
-                                    <p>The inspiring story of Arshad Nadeem, who made history by winning Pakistan's
-                                        first individual Olympic
-                                        gold medal in the javelin throw, overcoming numerous challenges along the
-                                        way.</p>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Featured Destination -->
-                <section class="featured-destination">
-                    <div class="container">
-                        <div class="destination-content">
-                            <div class="destination-image">
-                                <img src="/images/Gaddafi_Stadium.webp"
-                                    alt="Gaddafi Stadium, Lahore">
-                            </div>
-                            <div class="destination-text">
-                                <span class="badge">Featured Venue</span>
-                                <h2>Gaddafi Stadium: Pakistan's Cricket Fortress</h2>
-                                <p>One of the most iconic cricket stadiums in Asia, Gaddafi Stadium in Lahore has
-                                    witnessed countless
-                                    historic moments in Pakistan cricket. From World Cup matches to memorable Test
-                                    victories, this venue
-                                    holds a special place in the hearts of Pakistani sports fans.</p>
-                                <div class="location">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <span>Lahore, Pakistan</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                </div>
 
                 <!-- ***** Footer Area Start ***** -->
                 <footer class="footer-area">
@@ -640,10 +457,6 @@
                         </div>
                     </div>
                 </footer>
-
-
-
-
 
                 <span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span>
                 <script>

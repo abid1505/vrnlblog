@@ -2775,6 +2775,7 @@ button.close {
         .explored h1{
           color: #fff;
           text-align: center;
+          
         }
 
         .span_chk{
@@ -2788,7 +2789,9 @@ button.close {
       border-right: 5px solid #ce2c2c;
       font-weight: bold;
       white-space: nowrap;
-      color: #ce2c2c ;
+   
+          color: #ffff00;
+    text-shadow: 1px 4px 10px red;
     }
 
     .cursor {

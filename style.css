@@ -374,7 +374,7 @@ img {
 
 /* :: Header Area CSS */
 .header-area {
-  /* position: fixed; */
+  position: relative;
   top: 0;
   width: 100%;
   height: auto;
@@ -3467,7 +3467,7 @@ h4 {
 
   .h-100 {
     height: 100% !important;
-    margin-top: 48px;
+    /* margin-top: 48px; */
 
   }
 
@@ -3485,38 +3485,57 @@ h4 {
 
 }
 
-.header-notification {
+.notification-bar {
   position: fixed;
   top: 0;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 5px 10px 5px 10px;
   background-color: #37474F;
   color: #FAFAFA;
   font-size: 14px;
   z-index: 1000;
 }
 
-.signup-button {
-  margin-left: 10px;
-  padding: 5px 10px;
-  background-color: #689F38;
-  color: #FFFFFF !important;
-  text-decoration: none;
-  border-radius: 3px;
-  font-weight: 400;
+.notification-text {
+  margin-right: 10px;
+  text-align: left;
+  flex: 1;
 }
 
-.signup-button:hover {
+.notification-button {
+  background-color: #689F38;
+  color: #FFFFFF !important;
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+}
+
+.notification-button:hover {
   background-color: #558B2F;
 }
 
-.header {
-  margin-top: 60px;
-  background-color: #007BFF;
-  color: white;
-  padding: 20px;
-  text-align: center;
+@media (min-width: 768px) {
+  .notification-bar {
+    justify-content: center;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .notification-text {
+    text-align: center;
+    margin-right: 0;
+    flex: none;
+  }
+
+  .notification-button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-weight: 400;
+  }
 }

@@ -17,12 +17,65 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="/images/logo_vrnl_favicon.ico" type="image/x-icon">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&family=Work+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
 
     <style>
         .background-overlay:after {
 
             background-color: rgba(0, 0, 0, 0.5);
         }
+
+        .typing-container {
+            display: inline-block;
+            position: relative;
+            white-space: nowrap;
+        }
+
+        #typing {
+            font-weight: 700;
+        }
+
+        #typing::after {
+            content: '|';
+            animation: blink 1s infinite;
+            margin-left: 2px;
+        }
+
+        #typing-placeholder {
+            visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            white-space: nowrap;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
+
+
+        /* h1 {
+            font-family: 'Ubuntu', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1.2;
+            min-height: 50px;
+            margin-bottom: 20px;
+        } */
     </style>
 
 </head>
@@ -122,10 +175,18 @@
                         <div class="single-hero-slide bg-img background-overlay"
                             style="background-image: url(images/main.webp);">
                             <div class="explored">
-                                <h1>Explore the latest <span class="typing-container" id="typing">Bonus deals, Spin
+                                <!-- <h1>Explore the latest <span class="typing-container" id="typing">Bonus deals, Spin
                                         features, and Affiliate</span> in one place. Stay ahead with fresh updates and
-                                    smart strategies for every bettor.</h1>
+                                    smart strategies for every bettor.</h1> -->
 
+                                <h1>
+                                    Explore the latest
+                                    <span class="typing-container" id="typing-wrapper">
+                                        <span id="typing"></span>
+                                        <span id="typing-placeholder" aria-hidden="true">Affiliate</span>
+                                    </span>
+                                    in one place. Stay ahead with fresh updates and smart strategies for every bettor.
+                                </h1>
 
                             </div>
                         </div>
@@ -176,31 +237,31 @@
                                     <!-- Catagory Area -->
                                     <div class="world-catagory-area">
                                         <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                            <li class="title">Don’t Miss</li>
+                                            <li class="title" role="presentation">Don’t Miss</li>
 
-                                            <li class="nav-item" onclick="showTab('tab1', event)">
-                                                <a class="nav-link active" data-toggle="tab" role="tab"
+                                            <li class="nav-item" role="presentation" onclick="showTab('world-tab-1', event)">
+                                                <a class="nav-link active" data-toggle="tab" role="tab" id="tab1"
                                                     aria-controls="world-tab-1" aria-selected="true">All</a>
                                             </li>
 
-                                            <li class="nav-item" onclick="showTab('tab2', event)">
-                                                <a class="nav-link" data-toggle="tab" role="tab"
+                                            <li class="nav-item" role="presentation" onclick="showTab('world-tab-2', event)">
+                                                <a class="nav-link" data-toggle="tab" role="tab" id="tab2"
                                                     aria-controls="world-tab-2" aria-selected="false">Bonus</a>
                                             </li>
 
-                                            <li class="nav-item" onclick="showTab('tab3', event)">
-                                                <a class="nav-link" data-toggle="tab" role="tab"
+                                            <li class="nav-item" role="presentation" onclick="showTab('world-tab-3', event)">
+                                                <a class="nav-link" data-toggle="tab" role="tab" id="tab3"
                                                     aria-controls="world-tab-3" aria-selected="false">Affiliate</a>
                                             </li>
 
-                                            <li class="nav-item" onclick="showTab('tab4',event)">
-                                                <a class="nav-link " data-toggle="tab" role="tab"
-                                                    aria-controls="world-tab-4" aria-selected="false">Spin</a>
+                                            <li class="nav-item" role="presentation" onclick="showTab('world-tab-4',event)">
+                                                <a class="nav-link " data-toggle="tab" role="tab" id="tab4"
+                                                    aria-controls="world-tab-5" aria-selected="false">Spin</a>
                                             </li>
 
-                                            <li class="nav-item" onclick="showTab('tab5',event)">
-                                                <a class="nav-link " data-toggle="tab" role="tab"
-                                                    aria-controls="world-tab-4" aria-selected="false">Live TV</a>
+                                            <li class="nav-item" role="presentation" onclick="showTab('world-tab-5',event)">
+                                                <a class="nav-link " data-toggle="tab" role="tab" id="tab5"
+                                                    aria-controls="world-tab-5" aria-selected="false">Live TV</a>
                                             </li>
 
 
@@ -216,7 +277,7 @@
 
                                         <div class="tab-content" id="myTabContent">
 
-                                            <div class="tab-panes fade show active" id="tab1" role="tabpanel"
+                                            <div class="tab-pane fade show active" id="world-tab-1" role="tabpanel"
                                                 aria-labelledby="tab1">
                                                 <div class="row">
                                                     <div class="col-12 col-md-6">
@@ -241,6 +302,7 @@
                                                                             <!-- Post Thumbnail -->
                                                                             <div class="post-thumbnail">
                                                                                 <img loading="lazy"
+                                                                                    style="height: 160px; width: 100%;"
                                                                                     src="images/spinand bonus.webp"
                                                                                     alt="Spin Bonus">
                                                                                 <!-- Catagory -->
@@ -518,7 +580,7 @@
                                                 </div>
                                             </div>
 
-                                            <div class="tab-panes fade show  " id="tab2" role="tabpanel"
+                                            <div class="tab-pane fade" id="world-tab-2" role="tabpanel"
                                                 aria-labelledby="tab2">
                                                 <div class="row">
                                                     <div class="col-12 col-md-6">
@@ -651,7 +713,7 @@
                                                 </div>
                                             </div>
 
-                                            <div class="tab-panes fade show  " id="tab3" role="tabpanel"
+                                            <div class="tab-pane fade" id="world-tab-3" role="tabpanel"
                                                 aria-labelledby="tab3">
                                                 <div class="row">
                                                     <div class="col-12 col-md-6">
@@ -783,7 +845,7 @@
                                                 </div>
                                             </div>
 
-                                            <div class="tab-panes fade show" id="tab4" role="tabpanel"
+                                            <div class="tab-pane fade" id="world-tab-4" role="tabpanel"
                                                 aria-labelledby="tab4">
                                                 <div class="row">
                                                     <div class="col-12 col-md-6">
@@ -918,7 +980,7 @@
                                                 </div>
                                             </div>
 
-                                            <div class="tab-panes fade show" id="tab5" role="tabpanel"
+                                            <div class="tab-pane fade" id="world-tab-5" role="tabpanel"
                                                 aria-labelledby="tab5">
                                                 <div class="row">
                                                     <div class="col-12 col-md-6">
@@ -996,37 +1058,37 @@
                                     <!-- Catagory Area -->
                                     <div class="world-catagory-area mt-50">
                                         <ul class="nav nav-tabs" id="myTab2" role="tablist">
-                                            <li class="title">What's Trending</li>
+                                            <li class="title" role="presentation">What's Trending</li>
 
-                                            <li class="nav-item" onclick="showTabs('tab67', event)">
+                                            <li class="nav-item" role="presentation" onclick="showTabs('world-tab-10', event)">
                                                 <a class="nav-link nav-target active" data-toggle="tab" role="tab"
-                                                    aria-controls="world-tab-10" aria-selected="true">All</a>
+                                                    id="tab6" aria-controls="world-tab-10" aria-selected="true">All</a>
                                             </li>
 
-                                            <li class="nav-item" onclick="showTabs('tab6', event)">
-                                                <a class="nav-link nav-target" data-toggle="tab" role="tab"
+                                            <li class="nav-item" role="presentation" onclick="showTabs('world-tab-11', event)">
+                                                <a class="nav-link nav-target" data-toggle="tab" role="tab" id="tab7"
                                                     aria-controls="world-tab-11" aria-selected="false">Bonus</a>
                                             </li>
 
-                                            <li class="nav-item" onclick="showTabs('tab7', event)">
-                                                <a class="nav-link nav-target" data-toggle="tab" role="tab"
+                                            <li class="nav-item" role="presentation" onclick="showTabs('world-tab-12', event)">
+                                                <a class="nav-link nav-target" data-toggle="tab" role="tab" id="tab8"
                                                     aria-controls="world-tab-12" aria-selected="false">Affiliate</a>
                                             </li>
 
-                                            <li class="nav-item" onclick="showTabs('tab8', event)">
-                                                <a class="nav-link nav-target" data-toggle="tab" role="tab"
+                                            <li class="nav-item" role="presentation" onclick="showTabs('world-tab-13', event)">
+                                                <a class="nav-link nav-target" data-toggle="tab" role="tab" id="tab9"
                                                     aria-controls="world-tab-13" aria-selected="false">Spin</a>
                                             </li>
-                                            <li class="nav-item" onclick="showTabs('tab9', event)">
-                                                <a class="nav-link nav-target" data-toggle="tab" role="tab"
-                                                    aria-controls="world-tab-13" aria-selected="false">SRL result</a>
+                                            <li class="nav-item" role="presentation" onclick="showTabs('world-tab-14', event)">
+                                                <a class="nav-link nav-target" data-toggle="tab" role="tab" id="tab10"
+                                                    aria-controls="world-tab-14" aria-selected="false">SRL result</a>
                                             </li>
                                         </ul>
 
                                         <div class="tab-content" id="myTabContent2">
 
-                                            <div class="tab-paness fade show active" id="tab67" role="tabpanel"
-                                                aria-labelledby="tab67">
+                                            <div class="tab-panes fade show active" id="world-tab-10" role="tabpanel"
+                                                aria-labelledby="tab6">
                                                 <div class="row">
 
                                                     <div class="col-12 col-md-6">
@@ -1248,8 +1310,8 @@
                                                 </div>
                                             </div>
 
-                                            <div class="tab-paness fade show" id="tab6" role="tabpanel"
-                                                aria-labelledby="tab6">
+                                            <div class="tab-panes fade" id="world-tab-11" role="tabpanel"
+                                                aria-labelledby="tab7">
                                                 <div class="row">
 
                                                     <div class="col-12 col-md-6">
@@ -1417,8 +1479,8 @@
                                                 </div>
                                             </div>
 
-                                            <div class="tab-paness fade show" id="tab7" role="tabpanel"
-                                                aria-labelledby="tab7">
+                                            <div class="tab-panes fade" id="world-tab-12" role="tabpanel"
+                                                aria-labelledby="tab8">
                                                 <div class="row">
 
                                                     <div class="col-12 col-md-6">
@@ -1541,8 +1603,8 @@
                                                 </div>
                                             </div>
 
-                                            <div class="tab-paness fade show" id="tab8" role="tabpanel"
-                                                aria-labelledby="tab8">
+                                            <div class="tab-panes fade" id="world-tab-13" role="tabpanel"
+                                                aria-labelledby="tab9">
                                                 <div class="row">
                                                     <div class="col-12 col-md-6">
                                                         <!-- Single Blog Post -->
@@ -1769,8 +1831,8 @@
                                                 </div>
                                             </div>
 
-                                            <div class="tab-paness fade show" id="tab9" role="tabpanel"
-                                                aria-labelledby="tab9">
+                                            <div class="tab-panes fade" id="world-tab-14" role="tabpanel"
+                                                aria-labelledby="tab10">
                                                 <div class="row">
 
                                                     <div class="col-12 col-md-6">
@@ -2334,46 +2396,52 @@
                 </script>
 
                 <script>
-                    function showTab(tabId) {
-                        const tabs = document.querySelectorAll('.tab-panes');
+                    function showTab(tabId,event) {
+                        event.preventDefault();
+                        const tabs = document.querySelectorAll('.tab-pane');
                         tabs.forEach(tab => {
-                            tab.classList.remove('active');
+                            tab.classList.remove('active','show');
                         });
                         const links = document.querySelectorAll('.nav-link');
                         links.forEach(link => {
                             link.classList.remove('active');
+                            link.setAttribute('aria-selected', 'false');
                         });
                         const selectedTab = document.getElementById(tabId);
                         if (selectedTab) {
-                            selectedTab.classList.add('active');
+                            selectedTab.classList.add('active','show');
                         }
                         const navItem = event.currentTarget;
                         const link = navItem.querySelector('.nav-link');
                         if (link) {
                             link.classList.add('active');
+                            link.setAttribute('aria-selected', 'true');
                         }
                     }
                 </script>
 
 
                 <script>
-                    function showTabs(tabId) {
-                        const tabs = document.querySelectorAll('.tab-paness');
+                    function showTabs(tabId,event) {
+                        event.preventDefault();
+                        const tabs = document.querySelectorAll('.tab-panes');
                         tabs.forEach(tab => {
-                            tab.classList.remove('active');
+                            tab.classList.remove('active','show');
                         });
                         const links = document.querySelectorAll('.nav-target');
                         links.forEach(link => {
                             link.classList.remove('active');
+                            link.setAttribute('aria-selected', 'false');
                         });
                         const selectedTab = document.getElementById(tabId);
                         if (selectedTab) {
-                            selectedTab.classList.add('active');
+                            selectedTab.classList.add('active','show');
                         }
                         const navItem = event.currentTarget;
                         const link = navItem.querySelector('.nav-target');
                         if (link) {
                             link.classList.add('active');
+                            link.setAttribute('aria-selected', 'true');
                         }
                     }
                 </script>

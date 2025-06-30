@@ -3345,11 +3345,11 @@ button.close {
   display: block;
 }
 
-.tab-paness {
+.tab-pane {
   display: none;
 }
 
-.tab-paness.active {
+.tab-pane.active {
   display: block;
 }
 

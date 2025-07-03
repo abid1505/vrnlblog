@@ -7,8 +7,9 @@
     <title>VRNL | Spin & Win Daily Prizes | Test Your Luck Today!</title>
     <meta name="description"
         content="Try your luck with our Spin & Win game! Spin the wheel daily for a chance to win exciting prizes. No registration needed—start spinning now!">
+
     <link rel="icon" href="/images/logo_vrnl_favicon.ico" type="image/x-icon">
-    <link rel="preload" href="/images/logo_vrnl.webp" type="image/webp">
+    <link rel="preload" as="image" href="/images/logo_vrnl.webp" type="image/webp">
     <link rel="preload" as="image" href="/images/blog-main-compressed.gif" type="image/gif">
 
     <!-- Defer loading of main stylesheet -->
@@ -153,7 +154,7 @@
                     <nav class="navbar navbar-expand-lg">
                         <!-- Logo -->
                         <a class="navbar-brand" href="/index.html"><img loading="lazy" style="width: 100px;"
-                                src="images/logo_vrnl.webp" width="260px" height="109px" alt="Logo"></a>
+                                src="images/logo_vrnl.webp" alt="Logo"></a>
                         <!-- Navbar Toggler -->
                         <button onclick="toggle()" class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#worldNav" aria-controls="worldNav" aria-expanded="false"
@@ -614,24 +615,24 @@
         </div>
     </footer>
     <span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span>
-</body>
-<script>
-    function toggle() {
-        document.getElementById("worldNav").classList.toggle("show");
-    }
-</script>
-<script>
-    function toggleHighlight() {
-        const box = document.getElementById('navbarDropdown');
-        box.classList.toggle('show');
-    }
-</script>
-<script>
-    function toggleHighlights() {
-        const box = document.getElementById('navbarDropdowns');
-        box.classList.toggle('show');
-    }
-</script>
+
+    <script>
+        function toggle() {
+            document.getElementById("worldNav").classList.toggle("show");
+        }
+    </script>
+    <script>
+        function toggleHighlight() {
+            const box = document.getElementById('navbarDropdown');
+            box.classList.toggle('show');
+        }
+    </script>
+    <script>
+        function toggleHighlights() {
+            const box = document.getElementById('navbarDropdowns');
+            box.classList.toggle('show');
+        }
+    </script>
 
 </body>
 

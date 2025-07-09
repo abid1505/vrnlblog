@@ -57,7 +57,7 @@
 </style>
 
 <body>
-        <!-- Preloader Start -->
+    <!-- Preloader Start -->
     <div class="notification-bar">
         <div class="notification-text">
             Sign Up for your FREE Cricket Exchange ID. Back & Lay. Fancy Bet.
@@ -73,7 +73,7 @@
                 <div class="col-12">
                     <nav class="navbar navbar-expand-lg">
                         <!-- Logo -->
-                        <a class="navbar-brand" href="/index.html"><img loading="lazy"  style="width: 100px;"
+                        <a class="navbar-brand" href="/index.html"><img loading="lazy" style="width: 100px;"
                                 src="images/logo_vrnl.webp" alt="Logo"></a>
                         <!-- Navbar Toggler -->
                         <button onclick="toggle()" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -81,7 +81,7 @@
                             aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
                         <!-- Navbar -->
                         <div class="collapse navbar-collapse" id="worldNav">
-                           <ul class="navbar-nav ml-auto">
+                            <ul class="navbar-nav ml-auto">
                                 <li class="nav-item ">
                                     <a class="nav-link" href="/index.html">Home <span
                                             class="sr-only">(current)</span></a>
@@ -99,7 +99,7 @@
                                     <a class="nav-link" href="/spin.html">Spin & Win</a>
                                 </li>
 
-                                      <li class="nav-item dropdown" onclick="toggleHighlights()">
+                                <li class="nav-item dropdown" onclick="toggleHighlights()">
                                     <a class="nav-link">Latest News <i class="fa-solid fa-caret-down"></i></a>
 
                                     <div id="navbarDropdowns" class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -108,7 +108,7 @@
                                         <a href="/Latestnews/bangladesh.html" class="dropdown-item">Bangladesh</a>
                                     </div>
                                 </li>
-                                 <li class="nav-item">
+                                <li class="nav-item">
                                     <a class="nav-link" href="/Cricket blog/Bet on Cricket.html">Cricket Guide</a>
                                 </li>
                                 <li class="nav-item dropdown" onclick="toggleHighlight()">
@@ -240,7 +240,7 @@
             <div class="row">
                 <div class="col-12 col-md-4">
                     <div class="footer-single-widget">
-                        <a ><img loading="lazy"  width="100px" src="/images/logo_vrnl.webp" alt="Logo"></a>
+                        <a><img loading="lazy" width="100px" src="/images/logo_vrnl.webp" alt="Logo"></a>
                         <div class="copywrite-text mt-30">
                             <p>
                                 Copyright © 2025 All rights reserved
@@ -262,111 +262,101 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-12 col-md-4">
-                    <div class="footer-single-widget">
-                        <h5>Subscribe</h5>
-                        <form action="#" method="post">
-                            <input type="email" name="email" id="email" placeholder="Enter your mail"
-                                fdprocessedid="97dkgg">
-                            <button type="button" aria-label="Subscribe" fdprocessedid="sgh1bk"><i class="fa fa-arrow-right"></i></button>
-                        </form>
-                    </div>
-                </div>
             </div>
         </div>
     </footer>
     <span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span>
-</body>
-<script>
-    function toggle() {
-        document.getElementById("worldNav").classList.toggle("show");
-    }
-    document.addEventListener('DOMContentLoaded', () => {
-        const form = document.getElementById('contactForm');
-        const submitBtn = document.getElementById('submitBtn');
 
-        // Select inputs and textarea
-        const inputs = form.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"], textarea');
+    <script>
+        function toggle() {
+            document.getElementById("worldNav").classList.toggle("show");
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('contactForm');
+            const submitBtn = document.getElementById('submitBtn');
 
-        // Intl-tel-input setup for phone
-        const phoneInput = document.getElementById('phone');
-        const iti = window.intlTelInput(phoneInput, {
-            separateDialCode: true,
-            initialCountry: "auto",
-            preferredCountries: ["in", "us", "gb", "ae"],
-            geoIpLookup: callback => {
-                fetch("https://ipinfo.io?token='your_token'")
-                    .then(resp => resp.json())
-                    .then(resp => callback(resp.country))
-                    .catch(() => callback("us"));
-            },
-            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js",
-        });
+            // Select inputs and textarea
+            const inputs = form.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"], textarea');
 
-        // Helper: Toggle floating label based on value
-        const toggleHasValue = (input) => {
-            if (input.value.trim() !== '') {
-                input.classList.add('has-value');
-            } else {
-                input.classList.remove('has-value');
-            }
-        };
+            // Intl-tel-input setup for phone
+            const phoneInput = document.getElementById('phone');
+            const iti = window.intlTelInput(phoneInput, {
+                separateDialCode: true,
+                initialCountry: "auto",
+                preferredCountries: ["in", "us", "gb", "ae"],
+                geoIpLookup: callback => {
+                    fetch("https://ipinfo.io?token='your_token'")
+                        .then(resp => resp.json())
+                        .then(resp => callback(resp.country))
+                        .catch(() => callback("us"));
+                },
+                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js",
+            });
 
-        // Initialize floating label states for all inputs
-        inputs.forEach(input => {
-            toggleHasValue(input);
+            // Helper: Toggle floating label based on value
+            const toggleHasValue = (input) => {
+                if (input.value.trim() !== '') {
+                    input.classList.add('has-value');
+                } else {
+                    input.classList.remove('has-value');
+                }
+            };
 
-            input.addEventListener('input', () => {
+            // Initialize floating label states for all inputs
+            inputs.forEach(input => {
                 toggleHasValue(input);
+
+                input.addEventListener('input', () => {
+                    toggleHasValue(input);
+                    checkFormValidity();
+                });
+            });
+
+            // Also handle countrychange event for phone (intl-tel-input)
+            phoneInput.addEventListener('countrychange', () => {
+                toggleHasValue(phoneInput);
                 checkFormValidity();
             });
-        });
 
-        // Also handle countrychange event for phone (intl-tel-input)
-        phoneInput.addEventListener('countrychange', () => {
-            toggleHasValue(phoneInput);
-            checkFormValidity();
-        });
-
-        // Check if form is valid and enable/disable submit button
-        function checkFormValidity() {
-            // Use native form validity
-            if (form.checkValidity() && iti.isValidNumber()) {
-                submitBtn.disabled = false;
-            } else {
-                submitBtn.disabled = true;
+            // Check if form is valid and enable/disable submit button
+            function checkFormValidity() {
+                // Use native form validity
+                if (form.checkValidity() && iti.isValidNumber()) {
+                    submitBtn.disabled = false;
+                } else {
+                    submitBtn.disabled = true;
+                }
             }
-        }
 
-        // Initial check
-        checkFormValidity();
+            // Initial check
+            checkFormValidity();
 
-        // Optional: prevent submit for demonstration
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Form submitted!');
-            // Reset form or whatever you want here
-            form.reset();
+            // Optional: prevent submit for demonstration
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Form submitted!');
+                // Reset form or whatever you want here
+                form.reset();
 
-            // Remove all has-value classes after reset
-            inputs.forEach(input => input.classList.remove('has-value'));
-            submitBtn.disabled = true;
+                // Remove all has-value classes after reset
+                inputs.forEach(input => input.classList.remove('has-value'));
+                submitBtn.disabled = true;
+            });
         });
-    });
-</script>
+    </script>
 
-<script>
-    function toggleHighlight() {
-        const box = document.getElementById('navbarDropdown');
-        box.classList.toggle('show');
-    }
-</script>
-<script>
-                    function toggleHighlights() {
-                        const box = document.getElementById('navbarDropdowns');
-                        box.classList.toggle('show');
-                    }
-                </script>
+    <script>
+        function toggleHighlight() {
+            const box = document.getElementById('navbarDropdown');
+            box.classList.toggle('show');
+        }
+    </script>
+    <script>
+        function toggleHighlights() {
+            const box = document.getElementById('navbarDropdowns');
+            box.classList.toggle('show');
+        }
+    </script>
 
 </body>
 

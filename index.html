@@ -62,16 +62,9 @@
             padding: 0;
         }
 
-        /* .owl-carousel,
-        .owl-carousel .owl-stage-outer,
-        .owl-carousel .owl-item {
-            display: block !important;
-            opacity: 1 !important;
-        } */
-
         .typing-container {
             display: inline-block;
-            border-right: 5px solid #ce2c2c;
+            /* border-right: 5px solid #ce2c2c; */
             font-weight: bold;
             white-space: nowrap;
             color: #ffff00;
@@ -105,13 +98,6 @@
             overflow: hidden;
             display: flex;
             justify-content: center;
-        }
-
-        .overlay-content {
-            position: relative;
-            top: 0;
-            left: 0;
-            z-index: 2;
         }
 
         .explored {
@@ -159,9 +145,6 @@
         }
 
         .background-overlay:after {
-            /* content: "";
-            z-index: 0;
-            background-color: rgba(0, 0, 0, 0.5); */
             content: "";
             position: absolute;
             top: 0;
@@ -171,6 +154,25 @@
             background-color: rgba(0, 0, 0, 0.5);
             z-index: 1;
             pointer-events: none;
+        }
+
+        .typing-container::after {
+            content: '|';
+            /* Visual cursor character */
+            animation: blink 0.7s step-end infinite;
+            margin-left: 2px;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
         }
     </style>
 
@@ -270,12 +272,17 @@
                         <div class="single-hero-slide background-overlay">
                             <img src="images/main.webp" fetchpriority="high" width="1920" loading="eager" height="550"
                                 alt="Hero Main" class="bg-img" />
-                            <div class="explored overlay-content">
-                                <h1>Explore the latest <span class="typing-container" id="typing" aria-live="off"
-                                        role="presentation">Bonus deals, Spin
-                                        features, and Affiliate</span> in one place. Stay ahead with fresh updates and
-                                    smart strategies for every bettor.</h1>
+                            <div class="explored">
+                                <h1>
+                                    Explore the latest
+                                    <span id="typing-wrapper">
+                                        <span class="typing-container" id="typing-static">Bonus deals, Spin features,
+                                            and Affiliate</span>
+                                    </span>
+                                    in one place. Stay ahead with fresh updates and smart strategies for every bettor.
+                                </h1>
                             </div>
+
                         </div>
                     </div>
 
@@ -2394,7 +2401,7 @@
                         </ul>
                     </div>
                 </div>
-        </div>
+            </div>
     </footer>
 
     <span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span>
@@ -2458,37 +2465,47 @@
     <script>
         window.addEventListener('load', () => {
             requestIdleCallback(() => {
-                const words = ["Bonus", "Spin", "Affiliate"];
+                const words = ["Bonus deals", "Spin features", "Affiliate"];
                 let wordIndex = 0;
                 let charIndex = 0;
                 let isDeleting = false;
-                const typingEl = document.getElementById("typing");
+
+                const wrapper = document.getElementById("typing-wrapper");
+                const staticSpan = document.getElementById("typing-static");
+
+                // Replace static content with animated span
+                const animatedSpan = document.createElement("span");
+                animatedSpan.className = "typing-container";
+                animatedSpan.id = "typing";
+                animatedSpan.setAttribute("aria-live", "off");
+                animatedSpan.setAttribute("role", "presentation");
+
+                wrapper.replaceChild(animatedSpan, staticSpan);
 
                 function type() {
                     const currentWord = words[wordIndex];
                     const currentText = currentWord.substring(0, charIndex);
 
-                    typingEl.textContent = currentText;
+                    animatedSpan.textContent = currentText;
 
                     if (!isDeleting && charIndex < currentWord.length) {
                         charIndex++;
-                        setTimeout(type, 150);
+                        setTimeout(type, 120);
                     } else if (isDeleting && charIndex > 0) {
                         charIndex--;
-                        setTimeout(type, 100);
+                        setTimeout(type, 60);
                     } else {
                         isDeleting = !isDeleting;
-                        if (!isDeleting) {
-                            wordIndex = (wordIndex + 1) % words.length;
-                        }
+                        if (!isDeleting) wordIndex = (wordIndex + 1) % words.length;
                         setTimeout(type, 1000);
                     }
                 }
+
                 type();
             });
-
         });
     </script>
+
 
     <script>
         function toggleHighlight() {
